@@ -138,30 +138,6 @@ input:checked + label + .content {
     opacity: 100%;
 }
 
-label::after {
-
-  font-family: "Font Awesome 6 Free";
-  content: '\f067'; 
-  font-weight: bold;
-  
-    font-size: 3vh;
-    font-weight: bold;
-    position: absolute;
-    right: 1vh;
-    top: 0.6vmax;
-}
-
-input:checked + label::after {
-  font-family: "Font Awesome 6 Free";
-  content: '\f00d'; 
-  font-weight: bold;
-  font-size: 3vh;
-  font-weight: bold;
-  position: absolute;
-  right: 1vh;
-  top: 0.6vmax;
-  
-}
 @media all and (min-width: 1025px) {
   .accordion li:hover input[type="checkbox"] + label {
     background-color: rgba(150, 122, 253, 0.709);
