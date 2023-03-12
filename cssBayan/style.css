@@ -1,132 +1,127 @@
- * {
-     box-sizing: border-box;
-     margin: 0;
-     padding: 0;
-}
+     * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     
- body {
-     width: 100%;
-     min-height: 100vh; 
-     position: relative;
-     display: flex;
-     align-items: flex-start;
-     justify-content: center;
-     background: #8e77fe;
-     color: #68007d;
-}
+    body {
+      width: 100%;
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      background: #8e77fe;
+      color: #68007d;
+    }
     
-.box {
-     margin: 10vh auto;
-     border: #8e77fe 1vh;
-     width: 50%;
-     height: 100%;
-     background-color: #d2cbf5;
-     font-family: "bakbak one", sans-serif;
-     border-radius: 2vh;
-}
-    
-.accordion ul,
-.accordion li {
-     list-style: none;
-     margin: 0;
-     padding: 0;
-     cursor: pointer;
+    .box {
+      margin: 10vh auto;
+      border: #8e77fe 1vh;
+      width: 50%;
+      height: 100%;
+      background-color: #d2cbf5;
+      font-family: "bakbak one", sans-serif;
       border-radius: 2vh;
-}
-
-.accordion li input[type="checkbox"] + label {
-     display: block;
-     position: relative;
-     width: 100%;
-     height: 100%;
-     text-decoration: none;
-     color: #170026;
-     background: #b0abff;
-     border: #170026 0.2vh solid;
-     border-radius: 2vh;
-}
+    }
     
-input {
-     display: none; 
-}
+    .accordion ul,
+    .accordion li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+      border-radius: 2vh;
+    }
 
-.accordion li:hover input[type="checkbox"] + label {
-     background-color: rgba(150, 122, 253, 0.709);
-     color: #ff0000;
-}
+    .accordion li input[type="checkbox"] + label {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: #170026;
+      background: #b0abff;
+      border: #170026 0.2vh solid;
+      border-radius: 2vh;
+    }
     
-.meme-img {
-     height: 0vh;
-     width: 80%;
-     margin: 1vh auto;
-     overflow: hidden;
-     transition: height 0.5s ease-in-out;
-     background-color: rgba(150, 122, 253, 0.709);
-}
+    input {
+      display: none; 
+    }
 
-.meme-img img{
-     margin: 1vh auto;
-     background-color: rgba(150, 122, 253, 0.709);
-}
+    
+    
+    .meme-img {
+      height: 0vh;
+      width: 80%;
+      margin: 1vh auto;
+      overflow: hidden;
+      transition: height 0.5s ease-in-out;
+      background-color: rgba(150, 122, 253, 0.709);
+    }
+    .meme-img img{
+      margin: 1vh auto;
+      background-color: rgba(150, 122, 253, 0.709);
+    }
+    .accordion li:hover {
+      height: 100%;
 
-.accordion li:hover {
-     height: 100%;
-} 
-
-.meme-img h2 {
+    }
+    
+    .meme-img h2 {
       font-size: 1.2em;
       font-weight: bold;
       margin-bottom: 10px;
-}
+    }
    
     
-.accordion li:active {
+    .accordion li:active {
       background-color: rgba(150, 122, 253, 0.709);
-}
+    }
      
-input[type="checkbox"] {
+    input[type="checkbox"] {
       display: none;
-}
+    }
       
-label {
+    label {
       display: block;
       background-color: rgba(150, 122, 253, 0.709);;
       padding: 2vh 2vh; 
       cursor: pointer;
       transition: ease 0.5s;
       position: relative;
-}
+    }
       
-input[type="checkbox"]:checked + label + .content {
+    input[type="checkbox"]:checked + label + .content {
       max-height: 500vh; 
       overflow-y: auto; 
       transform: translateY(0); 
-}
+    }
       
-.content {
+    .content {
       display: flex;
       background-color: #d2cbf5;
       max-height: 0;
       overflow: hidden;
       transition: all 0.5s ease-in-out; 
       transform: translateY(-2vh); 
-}
+    }
 
-.content img{
+    .content img{
       height: 90%;
       width: 90%;
-}
-.content:hover{
+    }
+    .content:hover{
       height: 100%;
        opacity: 100%;
-}
+    }
 
-label:hover + .content{
+    label:hover + .content{
     height: 100%;
     opacity: 100%;
-}
-
-input + label + .content {
+  }
+  input + label + .content {
     height:0;
     opacity: 0;
     transition: all 0.5s ease-in;
@@ -138,50 +133,29 @@ input:checked + label + .content {
     opacity: 100%;
 }
 
-label::after {
 
-  font-family: "Font Awesome 6 Free";
-  content: '\f067'; 
-  font-weight: bold;
-  
-    font-size: 3vh;
-    font-weight: bold;
-    position: absolute;
-    right: 1vh;
-    top: 0.6vmax;
-}
-
-input:checked + label::after {
-  font-family: "Font Awesome 6 Free";
-  content: '\f00d'; 
-  font-weight: bold;
-  font-size: 3vh;
-  font-weight: bold;
-  position: absolute;
-  right: 1vh;
-  top: 0.6vmax;
-  
-}
 @media all and (min-width: 1025px) {
   .accordion li:hover input[type="checkbox"] + label {
     background-color: rgba(150, 122, 253, 0.709);
-    cursor: pointer;
-    color: red;
+     cursor: pointer;
+      color: red;
   }
 
-  .box:hover:hover .plus_icon {
-     display: block;
+  .box:hover:hover {
+      display: block;
   }
-     
+
+
   label::after {
+
     font-family: "Font Awesome 6 Free";
     content: '\f067'; 
     font-weight: bold;
-    font-size: 22px;
-    font-weight: bold;
-    position: absolute;
-    right: 1vh;
-    top: 0.5vh;
+      font-size: 22px;
+      font-weight: bold;
+      position: absolute;
+      right: 1vh;
+      top: 0.5vh;
   }
   
   input:checked + label::after {
@@ -192,6 +166,6 @@ input:checked + label::after {
       font-weight: bold;
       position: absolute;
       right: 1vh;
-      top: 0.5v
+      top: 0.5vh;
 }
-} 
+}  
