@@ -166,6 +166,6 @@ input:checked + label + .content {
       font-weight: bold;
       position: absolute;
       right: 1vh;
-      top: 0.5v
+      top: 0.5vh;
 }
 }  
