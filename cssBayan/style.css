@@ -44,5 +44,75 @@
       padding: 2vh 2vh;
       border: #170026 1px solid;
     }
+    input {
+      display: none; 
+    }
+    .accordion li:hover a,
+    .accordion li:hover input[type="checkbox"] + label {
+      background-color: rgba(150, 122, 253, 0.709);
+
+    }
+    
+    .meme-img {
+      height: 0vh;
+      width: 80%;
+      margin: 1vh auto;
+      overflow: hidden;
+      transition: height 0.5s ease-in-out;
+      background-color: rgba(150, 122, 253, 0.709);
+    }
+    .meme-img img{
+      margin: 1vh auto;
+      background-color: rgba(150, 122, 253, 0.709);
+    }
+    .accordion li:hover .meme-img {
+      height: 500px;
+    }
+    
+    .meme-img h2 {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .meme-img div {
+      font-size: 16px;
+      line-height: 1.5;
+      padding: 10px 0;
+    }
+    
+    .accordion li:active {
+      background-color: rgba(150, 122, 253, 0.709);;
+    }
+     
+    input[type="checkbox"] {
+      display: none;
+    }
+      
+    label {
+      display: block;
+      background-color: rgba(150, 122, 253, 0.709);;
+      padding: 2vh 2vh; 
+      cursor: pointer;
+      transition: ease .1s;
+      position: relative;
+    }
+      
+    input[type="checkbox"]:checked + label + .content {
+      max-height: 500px; 
+      overflow-y: auto; 
+      transform: translateY(0); 
+    }
+      
+    .content {
+      background-color: #d2cbf5;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out; 
+      transform: translateY(-20px); 
+    }
+    
+
+
     
     
